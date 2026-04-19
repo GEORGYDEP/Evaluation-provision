@@ -743,7 +743,7 @@ body {
       <p class="summary-sub">Tes résultats ont été enregistrés.</p>
       <div class="score-display">
         <div class="score-value" id="totalScore">0</div>
-        <div class="score-max" id="totalMax">/ 20</div>
+        <div class="score-max" id="totalMax">/ 40</div>
         <div class="score-pct" id="totalPct"></div>
       </div>
       <div class="score-breakdown">
@@ -753,7 +753,7 @@ body {
         </div>
         <div class="score-box">
           <div class="label">Exercice</div>
-          <div class="value" id="exScore">0/10</div>
+          <div class="value" id="exScore">0/30</div>
         </div>
       </div>
       <div class="summary-time">Temps total : <strong id="totalTime">00:00:00</strong></div>
@@ -772,7 +772,7 @@ const CONFIG = {
   APP_NAME: 'Provisions',
   NB_QUIZ: 10,
   NB_EXERCICES: 6,
-  POINTS_MAX: 20
+  POINTS_MAX: 40
 };
 
 // ============================================================
@@ -937,7 +937,7 @@ const EXERCISES = [
       "Non, la constitution de la provision est obligatoire, indépendamment du résultat de l'exercice."
     ],
     correct: 1,
-    points: 1
+    points: 2
   },
   {
     id: 'EX2',
@@ -947,41 +947,44 @@ const EXERCISES = [
     answer: 22000,
     tolerance: 0.01,
     unit: '€',
-    points: 1
+    points: 3
   },
   {
     id: 'EX3',
     partie: 'Exercice 1 — Écriture constitution (31/12/N)',
-    text: "Enregistrez l'écriture de constitution de la provision au 31/12/N (Journal OD). Cette même écriture sera identique pour N+1, N+2 et N+3.",
+    text: "Enregistrez l'écriture de constitution de la provision au 31/12/N. Sélectionnez le journal approprié et complétez l'écriture. Cette même écriture sera identique pour N+1, N+2 et N+3.",
     type: 'entry',
+    journal: 'JOD',
     expectedLines: [
       { account: '6360', debit: 22000, credit: 0 },
       { account: '1620', debit: 0, credit: 22000 }
     ],
-    points: 2
+    points: 5
   },
   {
     id: 'EX4',
     partie: 'Exercice 1 — Écriture facture (02/09/N+4)',
-    text: "Enregistrez la facture de réparation n° 178 du 02/09/N+4 dans le journal des achats. Montant HTVA : 85 000,00 €, TVA 21 %.",
+    text: "Enregistrez la facture de réparation n° 178 du 02/09/N+4. Sélectionnez le journal approprié et complétez l'écriture. Montant HTVA : 85 000,00 €, TVA 21 %.",
     type: 'entry',
+    journal: 'JA',
     expectedLines: [
       { account: '6107', debit: 85000, credit: 0 },
       { account: '4110', debit: 17850, credit: 0 },
       { account: '4400', debit: 0, credit: 102850 }
     ],
-    points: 2
+    points: 7
   },
   {
     id: 'EX5',
     partie: 'Exercice 1 — Utilisation provision (N+4)',
-    text: "Enregistrez l'écriture d'utilisation de la provision au journal OD, à la date de la facture (02/09/N+4).",
+    text: "Enregistrez l'écriture d'utilisation de la provision à la date de la facture (02/09/N+4). Sélectionnez le journal approprié et complétez l'écriture.",
     type: 'entry',
+    journal: 'JOD',
     expectedLines: [
       { account: '1620', debit: 88000, credit: 0 },
       { account: '6361', debit: 0, credit: 88000 }
     ],
-    points: 2
+    points: 5
   },
   {
     id: 'EX6',
@@ -991,7 +994,7 @@ const EXERCISES = [
     years: ['N', 'N+1', 'N+2', 'N+3', 'N+4'],
     answers: [-22000, -22000, -22000, -22000, 3000],
     tolerance: 0.50,
-    points: 2
+    points: 8
   }
 ];
 
@@ -1144,6 +1147,35 @@ async function handleLogin() {
 // Allow Enter key on email input
 document.getElementById('emailInput').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') handleLogin();
+});
+
+// ============================================================
+// SHUFFLE QUIZ OPTIONS — Randomise l'ordre des options pour chaque question
+// (appelé une seule fois au chargement de la page, donc chaque élève voit
+// un ordre différent mais stable pendant toute sa session)
+// ============================================================
+function shuffleOptions(arr, correctIndex) {
+  const correctText = arr[correctIndex];
+  const shuffled = arr.slice();
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return { options: shuffled, correct: shuffled.indexOf(correctText) };
+}
+
+QUIZ.forEach(q => {
+  const shuffled = shuffleOptions(q.options, q.correct);
+  q.options = shuffled.options;
+  q.correct = shuffled.correct;
+});
+
+EXERCISES.forEach(ex => {
+  if (ex.type === 'qcm' && Array.isArray(ex.options) && ex.options.length > 1) {
+    const shuffled = shuffleOptions(ex.options, ex.correct);
+    ex.options = shuffled.options;
+    ex.correct = shuffled.correct;
+  }
 });
 
 // ============================================================
@@ -1339,7 +1371,24 @@ function renderEntryTable(ex) {
     </tr>`;
   }
 
+  let journalHTML = '';
+  if (ex.journal) {
+    journalHTML = `
+      <div style="margin-bottom:16px;">
+        <label style="display:block;font-size:13px;font-weight:600;color:var(--slate);margin-bottom:6px;">Journal utilisé :</label>
+        <select id="journalSelect" style="padding:10px 14px;border:2px solid var(--gray-200);border-radius:var(--radius);font-family:var(--font-body);font-size:14px;font-weight:500;color:var(--navy);outline:none;background:white;min-width:320px;cursor:pointer;">
+          <option value="">— Choisissez le journal —</option>
+          <option value="JOD">JOD — Journal des Opérations Diverses</option>
+          <option value="JF">JF — Journal Financier</option>
+          <option value="JA">JA — Journal des Achats</option>
+          <option value="JV">JV — Journal des Ventes</option>
+        </select>
+      </div>
+    `;
+  }
+
   return `
+    ${journalHTML}
     <table class="entry-table">
       <thead><tr><th>Compte</th><th style="text-align:right">Débit</th><th style="text-align:right">Crédit</th></tr></thead>
       <tbody>${rows}</tbody>
@@ -1435,6 +1484,14 @@ function validateEntry(ex) {
   let studentParts = [];
   let correctParts = [];
 
+  // Journal check (if required)
+  let studentJournal = '';
+  if (ex.journal) {
+    const journalSelect = document.getElementById('journalSelect');
+    studentJournal = journalSelect ? journalSelect.value.trim() : '';
+    if (studentJournal !== ex.journal) allCorrect = false;
+  }
+
   for (let i = 0; i < lines.length; i++) {
     const accountInput = document.querySelector(`.entry-account[data-line="${i}"]`);
     const debitInput = document.querySelector(`.entry-debit[data-line="${i}"]`);
@@ -1460,10 +1517,13 @@ function validateEntry(ex) {
     correctParts.push(`${expAccount} D:${expDebit} C:${expCredit}`);
   }
 
+  const journalPrefixStudent = ex.journal ? `[${studentJournal || '?'}] ` : '';
+  const journalPrefixCorrect = ex.journal ? `[${ex.journal}] ` : '';
+
   return {
     correct: allCorrect,
-    studentStr: studentParts.join(' | '),
-    correctStr: correctParts.join(' | ')
+    studentStr: journalPrefixStudent + studentParts.join(' | '),
+    correctStr: journalPrefixCorrect + correctParts.join(' | ')
   };
 }
 
@@ -1492,6 +1552,7 @@ function validateImpact(ex) {
 
 function lockExInputs() {
   document.querySelectorAll('.question-card input').forEach(inp => inp.disabled = true);
+  document.querySelectorAll('.question-card select').forEach(sel => sel.disabled = true);
   document.querySelectorAll('.qcm-option').forEach(el => el.classList.add('locked'));
 }
 
@@ -1553,7 +1614,7 @@ async function finishEvaluation() {
     reponse_eleve: '',
     reponse_correcte: '',
     points: STATE.exPoints,
-    points_max: 10,
+    points_max: 30,
     tentative: 1,
     temps_secondes: totalTime,
     session: STATE.session
@@ -1589,7 +1650,7 @@ async function finishEvaluation() {
   document.getElementById('totalMax').textContent = `/ ${CONFIG.POINTS_MAX}`;
   document.getElementById('totalPct').textContent = `${Math.round((totalPoints / CONFIG.POINTS_MAX) * 100)} %`;
   document.getElementById('quizScore').textContent = `${STATE.quizPoints} / 10`;
-  document.getElementById('exScore').textContent = `${STATE.exPoints} / 10`;
+  document.getElementById('exScore').textContent = `${STATE.exPoints} / 30`;
   document.getElementById('totalTime').textContent = formatTime(totalTime);
 
   showScreen('screenSummary');
