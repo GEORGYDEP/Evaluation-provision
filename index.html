@@ -701,6 +701,17 @@ body {
   </div>
 
   <!-- ============================================================
+       SCREEN: LOCKED (Verrou fermé — évaluation non disponible)
+       ============================================================ -->
+  <div class="screen" id="screenLocked">
+    <div class="login-card">
+      <div class="icon-badge">🔒</div>
+      <h2>Évaluation non disponible</h2>
+      <p class="subtitle">L'évaluation n'est pas ouverte actuellement.<br>Attends les consignes de ton professeur.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
        SCREEN: QUIZ
        ============================================================ -->
   <div class="screen" id="screenQuiz">
@@ -801,120 +812,120 @@ const STATE = {
 const QUIZ = [
   {
     id: 'Q1',
-    text: "Quelle est la particularité principale des provisions pour risques et charges par rapport aux autres types de charges ?",
+    text: 'i4k+XbYx/K+15RuN.6qGkEd3ikNNJKatrO5AeJWKr46CrnES/qMLc2JsTAFC+Sk0rV8y/I2HSCFe2kfWCJ3mDIT1dddfaLnS/dktS0D5wp9dJciZ71X2euh7fyXi3aZO6So63CYDzqw491wtD78IS2RAs94gnDpu38wgPaovA1LMkCNi+h8/2axCySqfgXSAuat7dUw==',
     options: [
-      "Elles concernent des événements passés déjà facturés.",
-      "Elles permettent d'anticiper la prise en charge d'un événement futur.",
-      "Elles ne peuvent couvrir que des investissements.",
-      "Elles sont enregistrées uniquement lors de la réception d'une facture."
+      'AqUOR8Ok9qdOXZJo.lYmoNFzlCBToA33r7Edn2iFXfEyNuTE6TAY5Wf+lIS9kbtmmQOrKgxmYKnnsYXrQr6DosHRsMv2KJlI5BnWVXXEawxwvExaDplnr',
+      '3l8/cztlSEBxVHXI.ntCDYaXJuOYqVLsrHHIM4O1uIYzHO1Ri+1Hjh9JTfm8F7diRoIAF8NjHFFRQktlV8sW0CxrcpX7SMUwuDIqq15G9tP6/NmRsvjASYmegOSWvjFcQ5KJo',
+      'AlScg0lzB361IEgp.preMs7xBUWa1lylrr9Im1fDwuz6S9d2LjD4gGDCkdMzpOODcSd0Pe2FuppnNI4FF5l9wuX8YRrthGTUSPoR7f9o=',
+      'IKhQJS/8wR3n9yH8.LPczBJm3jdjwNjEFFy6vxHsWtcXsppWnM2fBfQOoiVmA/X8xmbRw+p1BlNEOxTpD62/Do0scBCIKLqLGQPZ8omffTPc68X4wv9+urf3X2a1EGpgIpxqTtA=='
     ],
     correct: 1,
     points: 1
   },
   {
     id: 'Q2',
-    text: "Une provision peut-elle être constituée pour couvrir un investissement futur ?",
+    text: 'WhoJgcbBjwndqUw3.m9l8UrRjGWEAMo0RXHjtaW6FVnBMeHzMkiOV7Z9v//cLCOOOtSTTBlKkS24LRy4K5KlZugiSaLdsXhPbabbsm6Ql7F8vXF/uu8VzvUGfFJU51PHvPusAn6axbzKGwWIo',
     options: [
-      "Oui, dans tous les cas.",
-      "Oui, uniquement pour les immobilisations corporelles.",
-      "Non, une provision ne concerne que des charges, jamais un investissement.",
-      "Oui, si le montant est supérieur à 50 000 €."
+      'AnP1eIyGPfvxb5sF.pUzmfN6hHV3Idl7xGVWQv8QMTr7fhb1aBc9RPCkDwzqOopUlYeh1',
+      'YWUMtoD9/jdPWM+M.AllHMXi4wrhXKxRUq4CLMBXhwQnMKemrwz0PL8oCYatNPaSqLqA7qsJ6AFYOli3oog/kF6V2LjP+CtSMg0n48deWh2T6',
+      '0N+8qjMzRYnCNI81.zDyMlCFCJMn1tFSkfDYRDSqAejnn9Atov+0cVty0fFL9ODkSVTaFJDaNVsusBnK8jKUyM01vXjpX+h6On7OIRRBwZDg7ZMCPfPYVh+dYcRg6VQ3zfcBoWIQ=',
+      'Iczyxkippqc41ryA.uXlGVQUVjEZGCQndAl6X60a0O096C7y44OtMMU16F7rr6jNHr+VEHbOyQLlH+LhGjk92e6UXbO+iLpqhXN+lLw=='
     ],
     correct: 2,
     points: 1
   },
   {
     id: 'Q3',
-    text: "Parmi les caractéristiques suivantes, laquelle NE s'applique PAS aux charges couvertes par une provision ?",
+    text: 'bjgrH2qO4EL22pPw.7bleAxFvsGxoll9obZVH8s9azOitHRP+hQG1OB+Sc6Ll44aqk5c3EYnIspIXLTkZQGsTxVGc89gwgBuSpz8hAkD6XyAseqd1G7Sozsg9hdaqKNXIXi6nUafVOZkK0bsnPArESn87qh+MbsBtBxBl2S7Ig9DuSTsQLWwq',
     options: [
-      "Charges prévisibles.",
-      "Montant connu avec exactitude.",
-      "Échéance imprécise.",
-      "Nature nettement précisée."
+      'kYh4G1wV9q7quYTz.a62e02zMmf1bJoHoyGgiXr8gP6pt0t1xRqPssXb8MMzRhn1law==',
+      'zP3q5AM0HY31Ke5k.Q38eznM5FzyxzksXpei/ywHY849WRVzKTaAKvZBaf5yraE/A5FJY+xYRXVd92g==',
+      'g9qTopuB0Br1+JHd.AgWNT6KVCT57rpoKQFYvTYFEy7dcHD+ahiG1SDdukMIHxIQRtNY=',
+      '2LV7kNO2DL1DA/W1.5xYSlqVzhD8g9uY9dh6YR2UCT59ZSJjTUZys40wytZ9n3Gf6Sx6aRlMj0j8='
     ],
     correct: 1,
     points: 1
   },
   {
     id: 'Q4',
-    text: "Pourquoi la provision figure-t-elle au passif du bilan et non à l'actif ?",
+    text: '93pwPDfYZcY3EWWY.DMEkD+OYOkYxqb+NM5UBjVVjLU1CY4+0qFwWq+EGSZZ4rKl6Dxvsv//+MGnbUsma+MFY3hr713o/UQP9g9V3Us+bZD4a88VHthDyPffnEFIKAWy9mSd1BYUR',
     options: [
-      "Parce qu'elle représente une dette envers un fournisseur.",
-      "Parce qu'elle est assimilée à une source de fonds : c'est une réservation d'une part du résultat pour financer une charge future.",
-      "Parce qu'elle diminue la valeur des actifs de l'entreprise.",
-      "Parce qu'elle correspond à un investissement futur."
+      'kycIX051fagG1l/B.DhyXbc7++SsWp6LaSMlzMoPlwdG8hA37RPms+j/jNMKtw0B5jgzwtrSzc034MDWaMkAFPELIl5ldg/rq49xPl6aYzvmbqQP0dgc=',
+      'MJZWfQSq5PSmyLcN.K/kfAolEFHqWH9qwGwwLTidIijDZ0MAumImLhoaBpaV//+hQAYwicVNbpbGz0JC8xLnTuNmrVD9EuKmD3k3on+bFZ0sMkRlvZWm0fCnZxPsdskaXc3NooSm1t5n3KfZ2Qsrvn/yvPfEyAwOWPjo4VCJewQS0AOwV5v0Y4HrVVst8B4opnAfXWO30+Cbpms2h03vEdxo=',
+      'hnU2Sys8W6cgFejP.4OSvK72tB4qUMWtLdRC23OmLH1yric6jeIwHHx2mBZuoY7QCbDsZiQFS0Rf2yyQ6Qr7U1X9Pr1GeOYzkdqoQhVCJpPrJ6a7/aaB1',
+      'i/R652qObar9fNNp.WOS9RQa4f3h81za52znTAP1GCJJo566POJ9ag4aRg0RTfxeuUatM3QwGCWRWAXBtXsRgdhRaUp5ji8JrMGECLwDjB/g='
     ],
     correct: 1,
     points: 1
   },
   {
     id: 'Q5',
-    text: "Lors de la constitution d'une provision, quel est l'effet immédiat sur le compte de résultat de l'exercice ?",
+    text: '6ci1PdFUMWQgwIV4.a61NiSkYBqu4F4fF9m9nhXhvsYEfFehcmJjbmodwsyxlZ6yiSrwgHKzdVwzCGcqQQyFWxTX+918AShnn3tvAJ2bWcz4lqSdwErzL4R3EF/+VyEGlpAj76/vaEp7ZTrKeNYFOftf3nlb8gyE/CZNP188NnLb/qHM/8sesLJhy',
     options: [
-      "Une augmentation des produits.",
-      "Une augmentation des charges, ce qui diminue le résultat de l'exercice.",
-      "Aucun effet sur le résultat, car la provision ne concerne que le bilan.",
-      "Une diminution des charges, ce qui améliore le résultat de l'exercice."
+      'TLkFZToDJEuWsqHl.otXDppa9CzQUZlXu9Y4qnMmOgfxlQXs4tyFbwVf3pTV/wDiK/P4zaxsEmsONkA==',
+      'j5Axj+O1LI+FoRz2.eKYSvMK5++VkYmzw2KpXgC2LFt8z7CthgjD1b0biCI2siIz4lYTLiS5xZ+AixdIfvAGpgJ7KIAp7t0JwvJ+obLOPMK/lysWSp4MC9klSfXmVOWodKDDNRA==',
+      '8osj7Y9d8uKIXbpu.I+FKGdqx0ExjhDSB/olgH90OfWNDPl1lFuYzY68XYC0oTfqTXBqXYpTtjGiYg8A5ZtpkkMDagb+Q7DP+E4Y6KVjiRLiCSVgUh1qfhxVGeFIyJvGjdMwKjQ==',
+      'gDi5Tlm4/D+VaS+1.8uyXGbu/Lz9RRQj8wWG0ENVmSMFbsdHxS9lZcAgPIXg5K2F+GndsKUcg9u3oVD/Yr8YJASNCJ+DL2mCoBNUgeDTb6e5qqW//NQBaZM+dVWtxg393ZZo2lw=='
     ],
     correct: 1,
     points: 1
   },
   {
     id: 'Q6',
-    text: "Le résultat de l'exercice (bénéfice ou perte) peut-il influencer la décision de constituer une provision ?",
+    text: 'FxV4L4GKTO2LZ750.c7C853AHO4LoB8kOPZzrNTFW61uGO8R4NEIG5gPNh6KyK/SghXjwBkkUgpqSwD4ViRi5tbrS3loPagbzy8ZwPKIdAt6VgrxV38X93jwsnkwoULeQ+Cv3IqnPkDjj7xWF1Y72UtGQUw+TgKJGr5N+dwJHatFytNgfPiJDdZz1',
     options: [
-      "Oui, on peut reporter la provision à l'année suivante si le résultat est négatif.",
-      "Non, la constitution est obligatoire, indépendamment du résultat de l'exercice.",
-      "Oui, la provision est toujours facultative.",
-      "Non, mais on peut réduire le montant de la dotation en cas de perte."
+      'IiHmIkW9PKhgJqlc./MWwaUJbo6j8/cHowEf09W5wQXG0V4iSSBV/dXOgPtC+08AiwrPJRt7GRcs6XaOG6tVGhzj72qVObsNg/gj/i/ezWU1GdUB+XsjehDc32M2mhOX2mkzHeYEL8wheTa366T5V5eE=',
+      '09ey47lJJq7tzsX2.i1BlE6HORQAlk2q+UPxnwoaCh6wKLWUFPRrYhfLjwjBRZpLWZRfffWwPW7I2PpPgvbLSjIp+xEfMMDI0yxH0GH7HntNxpaRUegOrcxx40H4Q1rzm7plhRy2em548k7hfdg==',
+      'kOIlEqUcNd+Qf0Xa.tQRqEl1neqDv2/4yyFjqxgpt88Nvbt4F9e5x9i1QdeuAYOtyIvqixX+jstEIfkFF9crpMSGmsixrcvQ=',
+      'aGTyEbZkALN4w95k.1sVB9yIH/B4+xmyhXLj2poa9iFPhb2HEEpPK/CJeiiy7fd34l32WjaXv18r8/RmzbUsPAsm1+U+ga6gxBElyPX8opPmuVJUUFsCLkglstzGMJihw4w=='
     ],
     correct: 1,
     points: 1
   },
   {
     id: 'Q7',
-    text: "Une entreprise a constitué une provision de 60 000 € sur 3 ans. La charge réelle (facture) s'élève finalement à exactement 60 000 €. Quel est l'impact net sur les charges de l'année où la facture est enregistrée et la provision utilisée ?",
+    text: 'goGGuTwmAXd6FcDV.YTZYLk3sRH/T9A43+KZrvAsbKgmiSDuDD26PPzdfGLj1RqitbirznuEcb1Pt7dcGjH4ifbxSBZZ2gmSJFVD8udKrKeZpi6BkPVe8oegm/Mlb14tBonff8yAO+NPAvQUDFrZ9sDJBH+m/aP7vDx0iw61DNdWo01F2MEvDEhkvxuQQfSQOiWczQAdD+dcXmIVtIuiQeYlLbZ2B3ytSysnd5o6jZ798dSTEDT1CvycPgK88sk5hJ73fUapqWK+do9ugN8K3apcd+xwJsfW5As+vI3fKOjqlUuneXbn4goUtgN7QPNJ3TpfEt62Zr0LfyxPmyT0SYEiSgEhU73NiDkQmFSqHGevT7WTM2GxX',
     options: [
-      "60 000 € de charges supplémentaires.",
-      "120 000 € de charges (provision + facture).",
-      "0 € : aucun impact net sur les charges de cette année.",
-      "60 000 € de produits."
+      'Wdq5Ythj517X7yny.33rg0yUV2PvFkBZt/8cgWWjED0OU1GPhejVsX9EYaRCHve5zCLLCnbo/horq9qC7+Fejy7nf8Q==',
+      'o6UT5eYmihJ3iPwX.UVb/tfEEVJsrOsST0gi8a2toFft+u3paZVTc7eDlncMSmjcun6wYjMQHMOlDX40bjmF7MJ1/nNB/HDi8sQ==',
+      'gIvcJQ6qMHBMwwuN.iB33ykGaxqImLjVjrFVDe9NMdoj6THAVkMSfV/wrDdtUyv66YVZ9jPFBso3bzbAhy7lmudNC8U97NyLO953zzR3blEL2SPp3cA==',
+      'FhojuYcCi5QCqJrF.b5veVX7tNaxLlIp3Ft9KgoMsnXGhogXpUsuFSrlS/3PeMJ2SZpTH'
     ],
     correct: 2,
     points: 1
   },
   {
     id: 'Q8',
-    text: "Lors de l'utilisation d'une provision pour grosses réparations, quel compte est crédité ?",
+    text: 'a7z9NcrUpltCu5WS.h2ee41xdosboObySda+w6q+M17ckvnawUSARDLT4n8J2hHKO0OX5nsqZAfy7no0aXg0IVVT82FAOQ8B10pncVsUBsSxPk2/9QAm1otKLabaAtbZwM8g9L09Qspob9f4YwOsXeDukd+R3S+gF',
     options: [
-      "Le compte de provision au passif (162).",
-      "Le compte de dotation (6360).",
-      "Le compte d'utilisation et reprises (6361).",
-      "Le compte fournisseur (440)."
+      'bReX35u9sRAVAkKU.R/j28aXotREzzHL6GZ5GLDCNQF4Yd4cYT+Hgc/3aZCdhr1Q7Z2koFgiwn4F7OiCMnGIJnhcOhg==',
+      '9fB9Gq/i+aLwCWZJ.a/Gnpjmsd5h9s1hr2P0+pq9wc8QtvGTBsQDyP8cW+6ts+BUCIDXUiuvtUff5',
+      'EOkSJggVPHsycYE2.naHhbrLi1XqJiilC7mYpXr424sTwjfKe+utvm7yh/es8rqCJXKSzr7Xae2iDTcvKBijhxUgPKfHEp1s=',
+      'OQEglwgYks0Lf/lN.j1KUETqyJhhv+v3DtyDI/GMh8WOj5Q8aKZ97PHe8E4Z51HAT8c4g3dNF66Q='
     ],
     correct: 2,
     points: 1
   },
   {
     id: 'Q9',
-    text: "Si la provision constituée (50 000 €) est SUPÉRIEURE à la charge réelle (40 000 €), quel est l'impact sur le résultat de l'année d'utilisation de la provision ?",
+    text: '8FlgUyjepuztc6x1.pPZE5pWHvqv9zbKQobWUkg2yzgm85xHxUA7RgLchUhfIPjaRNKgX3nsy4X5xaobEZbFPxN8m3rlkYmKng3Nyg0GAn/7kr+ggXgRqCEguxz2+mhmZdvBvJBGG3Be1fQLpODG8oKGAan8WS98qk7z5TF4fNgg+5071K2qtrWqm01MM/LQRTv9FpO07BtIu9+Lb0bOqMmDzttrsd2FwricLDGX9dQr3FC6065rjbpgggqOjKxGZOWe/agUD',
     options: [
-      "Augmentation nette des charges de 10 000 € (impact négatif).",
-      "Diminution nette des charges de 10 000 € (impact positif sur le résultat).",
-      "Aucun impact sur le résultat.",
-      "Augmentation des produits de 50 000 €."
+      'oiZV2R0SD/ID/Lh5.1HV+98/fao4kf8t/Icq3twy9o09Nyh6/qtgQ0lDuOOjortmlDV2sS38qjhsBQQodx6gNgqoxmygqGPFDWwq4zz2BV/agRfbNWWgSpLflCw==',
+      'rRDSWcPh1XaKQVUR.sLXMnZYieiT83auDurMQMMFEc0bPX+Rq03yzsU1OtUZKg5tZrn4SXsHkV/3hyBaHXE3PhJyUa8VJtWdSXJ0+QyEZWo5P2GpdCpFKln8MTUM1bq12Oy77lk7V50Qx',
+      'LN5KwUH8B25J575A.gKhezJ/fs20knZhFlJ4A0eHEGhBIrmLFJaKDKUVvX3Umhrx6yBDVz1noQVOyuw==',
+      '2H7vrMoAg13kgTT2.xY+KamZxe0acC4T1w+bN1iPQUPrVVf1WyScgEgPcG8u2u77Wy2ObBulRMMM0zskrXiodJgjYmow='
     ],
     correct: 1,
     points: 1
   },
   {
     id: 'Q10',
-    text: "Quelles sont les 3 grandes étapes de la comptabilisation d'une provision ?",
+    text: 'cni11b430ujTW5c9.9Rg6SmBDa2PEZDXelGzwrDALUKWyk3lOJCsox4I8u75E6jmT1fxvMc9OefEfVxjN+fBiktkiCXdJmEB4BQ9OhkarXCyGv21vVqo8Ku4JZmqy67GiqDsuYizc+Q==',
     options: [
-      "Estimation, facturation, paiement.",
-      "Constitution de la provision, constatation de la charge réelle, utilisation de la provision.",
-      "Dotation, amortissement, cession.",
-      "Prévision, réalisation, clôture."
+      'GuD+7ztzsBZzNavi.nDYDyT03z7GvJCIAmvZrb0YVWuesvTQN4TqpI7C9LQFZvq4Ycx+wEfRkj5NlcPhkFcI=',
+      'gCTdTeheHqVAH30f.GiQJcnPmZxrDKNV5hmbubHdFtL+11YE9UxFxm4TwWDL5IiGzSHDrUzj5v4rh/6j1eBq30FDhRlcF06Iv7ldV21zJudycxOZbCtazhlrGu/vGOFgq1kBFY57zxthEq7gDXzsUbX7N7UWY52zR8w==',
+      'T7bLMw2/9oGDUxT6.ZdxsBOyyItECWmrLw9Ay+p7cqbtop4KfmKFIdHYd8QMBkHMUMt2XQsWQyDchqtF+Ow==',
+      'D2GuekBKFhejTGPB.bLHlfJF0W9pJ1w80rYa9p9XScZDJLzfnaxKVoAJoCkUwecfHrOhoiqpNVWS7WrfoyJWM'
     ],
     correct: 1,
     points: 1
@@ -924,76 +935,83 @@ const QUIZ = [
 // ============================================================
 // EXERCISE DATA
 // ============================================================
-const EXERCISE_CONTEXT = `<strong>Entreprise « Moulin »</strong> — Le 31/12/N, la société chargée de l'entretien des fours informe l'entreprise qu'une réparation importante doit être réalisée. Le montant est estimé à <strong>88 000,00 €</strong>. Le directeur envisage de l'effectuer en <strong>N+4</strong>. Les résultats de l'année N sont malheureusement dans le rouge.<br><br>En N+4, la facture de réparation (TOUTNEUF, facture n° 178) s'élève à <strong>85 000,00 € HTVA</strong>, TVA 21 %.`;
+const EXERCISE_CONTEXT_ENC = 'zC9grX2ND9swuvD5.F7q+xJ4l5b6GVkdYHxyFZTY3CXt9+rl5LehZVV3oTNb1CkXwIJhOxutwh2jOoZd7LPhKKE8mHAsl8aOFqIzsGX1/SbqRUCSXRyHbwlugiIlpiP6efkKleo8hgzbOSe5GMrJsAaMLv/a+gfNKbiM6dBwDLlj3Duk2UkGcJnQjAssNeLj6Agz/exgOWUmCg6bARiNZw4koGu1K95y0oDJTERNS6jT1vHVan963fH8smMGZABTYPc6J+jGPe1Myh1H41N0E6TfNVZSSCrjBp/TfNrYhgu+KRcFdqBkc4Bk98VmEJZdGppnEx3WylODuWibMBEXBHzEPwwYvN+h+Tac7Rfvm5Qju+BYqKZkKnNbvsEYsYMZy7Hl8ki3T6ULcui5pZcGr1IXYCBfrxjUeyIQednP3epZ18/g0l/ZfHpdVm/Rj842F5nLzhF1cqEoc0V5cLk4CgO8546/mikBEVGMHZpv1xJr0kd/QDkEJg8kalrCuXJfoocgSkcnBAICOvGh6f3oG9H9yn2eY9fqnIPLgqWYr6LZqokGOYlGsIXR3Pwl5OT4InhrPBSwxaUOUmd1IbdcAAEcwwdQKVbCjIIT3luOpBKgkatif1p0pu7PWRPPGZSc3dj/kqe5TZxPSvk9wQYuPuKx2Pxn2Ja+GdbGwb+PkS1LCtJo9i4c2';
+let EXERCISE_CONTEXT = '';  // sera rempli après déchiffrement
 
 const EXERCISES = [
   {
     id: 'EX1',
-    partie: 'Exercice 1 — Question théorique',
-    text: "La société « Moulin », dont les résultats de l'année N sont dans le rouge, a-t-elle le choix de réaliser ou pas la provision pour couvrir le risque futur de réparation ?",
+    partie: 'XzkX35YHhTevy7rf.MUcGVivBIE9WviTnmf3BpLratnqYKLBB4D07h0/XA3lUquJ2ykFxNiiKR6/7XeV5iPw=',
+    text: 'NBaLX09JdB+v04wI.gAK+/nZqn+VZ77UBrk7JmJ5AIIMcz4Pv/2BMHoOqtVyqJy0v70Q1+Eb7w2D2pVMEHzbLGaK8leodTW0fS2ohCteMKbRMaPEPw0ePgj7EAf6PigAEd7WvktAVv1Zpz8YPzoLdjcBbJrGZSf8VRDn/Zx3vKDg0zsRfh031udEX6y1keVo6pTxLZMv1QSivqxnCKK+x9ymf4UhYkXCGk1TYvpstXiYaZHF9Xe4dU3dqZs/XyQXq/wwmMqNtT8Fqj4rJwQ==',
     type: 'qcm',
     options: [
-      "Oui, l'entreprise peut choisir de ne pas provisionner pour préserver son résultat.",
-      "Non, la constitution de la provision est obligatoire, indépendamment du résultat de l'exercice."
+      'Du3EqCnatEbGwbUv.jyY0fvRxmOn+APEgRrg2PT1gCEq4HTrg4sd4XGJiLe3HsjTZ+CaZoj+fH2T7AOZnirI312dYu9DRNBNSDOihnLKUCK0IFEx62rj5Bl98TtkYprqTedT+x9uEiZ0hLA09aWvgEQ==',
+      'E/9S2f7ckHoHPMLC.cDCK7xtzuQect4B6PUmpIjwR2GouLctSZn8kPsv+e7fjy1ohhkplFJfJ6K4OBxzk4C6GkiooFtIediem+Yzax1Jn/X4L4LJrP9Z7I+8FFSK+2vT2lH1QFfRFQ95Jb3IHkPU63ovHenWHVbXFcz21BWs='
     ],
     correct: 1,
     points: 2
   },
   {
     id: 'EX2',
-    partie: 'Exercice 1 — Calcul dotation annuelle',
-    text: "Calculez le montant de la dotation annuelle à la provision. La provision doit couvrir la charge estimée de 88 000 € et être répartie sur les exercices N à N+3.",
+    partie: '4Cd2bLWYM20/RYli.upRTs9KBGKl3dNZ/Eg8cm5vp8C/AYS3jz4pVAfQeI/T+nuhLVEQYaWuSDrzq67gXNkrUn+4Ywg==',
+    text: '+hoQF1WAn41/woHi.b4Y7wYAmx6N5bKPrtSQY/F4rJ9Kmca83Jk+nJP23y4Lz652BCDTCYFTuexhG81jyib+6F/NoHqWqjaS8oe2Eiy+3SpMPPZqv9ZqhP6d7Q7Wow2KUPVHKprJcoepbgLMkgdBpNr3ZU504D6pALMDW9NfSAd6uxsaSOxcZ2xGqwjrTsnK6TsqcJIDdXCxU+ZCRZjOl4jninUQLybuOa+v9uAmt1mzzINNT82siOeuhozCFbN0axEc=',
     type: 'numeric',
-    answer: 22000,
+    answer: 'F23oTtsBK0MVGeU9.7sbOt9t5jzRGjHridhvA8L72Lml1',
     tolerance: 0.01,
     unit: '€',
     points: 3
   },
   {
     id: 'EX3',
-    partie: 'Exercice 1 — Écriture constitution (31/12/N)',
-    text: "Enregistrez l'écriture de constitution de la provision au 31/12/N. Sélectionnez le journal approprié et complétez l'écriture. Cette même écriture sera identique pour N+1, N+2 et N+3.",
+    partie: 'YycSasGt9g7MvoIm.Q5mus6v6MFhDfyxBwaLeHgwrNwc3BchurG54dvaFdAx7GFxp1r/rEJYZ1hahOGhfR7nGfPdo42xnlRizZOhZ',
+    text: 'f35uI4TI/xa2to5n.U7pIP8YDrRXh5UUopD+FCGwC3IRs7AzVsk3qLe1S64XShoUAQVoNQ+f29NUqAlyG6OGu38MqLRvdcSxFp2emBW0fixMCP7foIXlHkR1/VRvElYKAAbIAEjoeHj4ogv9B3Z/7taoVnznp2vO1cq8N5pFlPNyYvzxHBuI4QKFJXWN1BZG40NS08qnfryrieMr8eLd2pmClQ2qG6qc2orSSapQCjclearTItrLS4AHAKqIYkS9C4F5qrZ92Cj3gQODTsy+D3aHXC4LtjgEspg==',
     type: 'entry',
-    journal: 'JOD',
+    journal: 'vUNpCcL4N8kHS6D6.UeUmrpt/uAX9bNTldDL9+qLuWw==',
     expectedLines: [
-      { account: '6360', debit: 22000, credit: 0 },
-      { account: '1620', debit: 0, credit: 22000 }
+      { account: 'j7ULDgF9bPYWr2ZM.s+/x1qgHYhIUOmbpn0vDcshoHLc=', debit: 'dGrw7k/H7XaSPUpr.Kwl3hVzUUnexrvp7IzYLjxzh7Ypw', credit: 'ulNqtrwAwWycyFCW.MAmtNE/aSMofU7P4QwF7cic=' },
+      { account: '4YFgBHHWm7LyEx3m.Ocfh7yhCiO5od1zVrpV6XG2uSmU=', debit: 'BflhrUbx5BWsKMCa.b4vcchxvidfWHLDyr3eRAXU=', credit: 'Z81+lgAljsNkLo+v.rd+wArEC/nyXzdSS/ckJqj+Apx0d' }
     ],
     points: 5
   },
   {
     id: 'EX4',
-    partie: 'Exercice 1 — Écriture facture (02/09/N+4)',
-    text: "Enregistrez la facture de réparation n° 178 du 02/09/N+4. Sélectionnez le journal approprié et complétez l'écriture. Montant HTVA : 85 000,00 €, TVA 21 %.",
+    partie: 'facVPV/n+PhrnLRC.w3rkPF/o34UVlrs/KaQs/fTikZnlZtynUQbfDwt3Sm2yn32Oh1dyGxvIdwmR+dZW2SJLPNqnKEk0gOzp',
+    text: 'VNC47CHbsdzXlJSG.AnVBTF2iFHzFEq5vl+VT8qPrT5MgHJ+ztKZGvsSQvtuX+w/aIdxteWZgMym9zOLjG8keO/LOgYqz7Uztlhw6x/qLnj7FWBvf5FjwPXe6RG0tXExTfY7KCt9+hgmb61PhL5vPA6XoKYJmpNyqBlWhS8ctKqBoCBWLEgPyEl33U3bUzRix2d5dX4Ky+G25ixILd+bAUGH5lP7o7Xjj36hQxuDTlQai9LG0/attYyt7PWQzZw==',
     type: 'entry',
-    journal: 'JA',
+    journal: 'EJjlXQAoxu2PIda3.kCkj71XIZUlG81EJrdNo2HBD',
     expectedLines: [
-      { account: '6107', debit: 85000, credit: 0 },
-      { account: '4110', debit: 17850, credit: 0 },
-      { account: '4400', debit: 0, credit: 102850 }
+      { account: 'uBa2q7oVMBXa3fe8.+pqjS/Z2rjezLYmc+cbvdgX3fHY=', debit: '4eYcyispHBd3I27/.UtMDNoFTrqO6jBtyxM/K8n9SrkEd', credit: 'CRdpewrxKfoWfAwC.bcrqsikqFDShbvpo/dJy87A=' },
+      { account: '8VdzdG8dU7X3bztO.5jz2cMDvFAHjbjyVqTNtSg0ZmRI=', debit: 'k0Q9n8eu/wXyi9pU.fHVwKvlno2QOb6kO83POhVSdwh8C', credit: '+Rqks1IdxJRaKh2N.5VG3sUUu0qPEnObl7iolYNk=' },
+      { account: 'pdmuYNM8Jet9I3jl.3VAQSbZTvdcXkM61+yoCvqoMvpo=', debit: 'i7fgHFQ2UCyv4mpf.l7Fy0G8OA7xaSZ2joh87CbQ=', credit: 'HLXyxfiVowKpeAeA.b5GI4hnTYyQlxvC1UP/wq3ORv7u5ZQ==' }
     ],
     points: 7
   },
   {
     id: 'EX5',
-    partie: 'Exercice 1 — Utilisation provision (N+4)',
-    text: "Enregistrez l'écriture d'utilisation de la provision à la date de la facture (02/09/N+4). Sélectionnez le journal approprié et complétez l'écriture.",
+    partie: 'mBMjC2s+7qDr1RCV.jPZf0aCvD6gJ8Z5al/ubF+0lfrGXPdwSIO3ogjBrOpasq8t9RX6vJ0b/HSjw8sRLsh4V+++xKFufjQ==',
+    text: 'AoQtxRKwVUjUmwp1.ECXRk4rEy/dWaUQbYprDAXwwjsWHZEGts/ygRGZCXU7u0Vh5UZCfjVdFDXurNMCJjYowGucgXslM4DR9Siq2Qimjh1DfwmwEDBTDUx87gf6f8xzxthlI5uH+rao0EJR9E01TvZKzH269TnitsmQlxgMSqY70Ls9dX9Gzw/JYet6zhkMKZmKYfXXZAS6u/Qjkej7QvE3fIgqXDA73yiFlvYdbJSBJdG2dgZ4=',
     type: 'entry',
-    journal: 'JOD',
+    journal: 'isf7iTfoljkDi37p.KerTRWYMAg3YYpZAt92iiXlKmw==',
     expectedLines: [
-      { account: '1620', debit: 88000, credit: 0 },
-      { account: '6361', debit: 0, credit: 88000 }
+      { account: 'bWVfRTBtIwU6Bqvd.vyx1iQEveZUpKFBzNaxBrGmX7iI=', debit: 'VBCG0TxHMJgAlwO7.b/lHMc3VYEcLPWSGidnzdb9otI4I', credit: 'hzbjh/wyy9DeiTKP.hfJ6aKU9TWbwAiEk0tvsUVo=' },
+      { account: 'PM/nwqza60cvZbwJ.7YsK7JjxHCMahlNI2lENSfR5lK8=', debit: 'cs7hR48heXnDdYoC.8ihmjXKh2YoyY86nk7RNOv8=', credit: 'mrXoZHCh4UKJlOVF.8rfZmgu9DX+ZHY3wsmN1Dckl+O8N' }
     ],
     points: 5
   },
   {
     id: 'EX6',
-    partie: 'Exercice 1 — Impact sur le résultat',
-    text: "Déterminez l'impact sur le résultat pour chaque année comptable (indiquez un montant négatif pour une charge, positif pour un produit net).",
+    partie: 'LzDnjdwhqDArYrtp.54gC+wkZnhd6MPfJts4k3wKmkhYWopKhFymhJuebSUTyAIAymJcGiVehStnno8dkg0MYV6Fb',
+    text: 'XxG7NadQl3oNEdSU.pwvdY6O1ntQuD1Qp6kLRsWFV3zTTRy83ZAhvn8PpHRYf+5WoPw3QM+0D8qy59O4h8ZuPozjy28WP3YtU3tsCmMA5Ni7oKLV4cUavJr5x3HSQEhmkvnTaRwtRn9f0Gv3O38uQ0PWU01YHruGPQ2ppC8rAG/6Ts6C1ZXHosoTYES3aec42vOjypE75VJkI+uzr4HvIjBW1Lmia5EUO7gHD',
     type: 'impact',
-    years: ['N', 'N+1', 'N+2', 'N+3', 'N+4'],
-    answers: [-22000, -22000, -22000, -22000, 3000],
-    tolerance: 0.50,
+    tolerance: 0.5,
+    years: ["N","N+1","N+2","N+3","N+4"],
+    answers: [
+      'zOE3N385p44Ze0+l.T3K73MWV5vX0Px2Rl6MXE0wvcRIJ1w==',
+      'Wkg96spP0+cqajZj.k55+vsspvGhNenNtcOmMGF15O66XPQ==',
+      'pPFnrvPmJXEznb0+.dFR0BOPCObNc4Z5+UkJ8N2gs6aQvLw==',
+      'cKl8etvmyZmLa0Xq.vZPv0EHRmM8CIJZ2MIH+1TlXdvh3Rg==',
+      'iM1O84Hl6bsp6LlM.HputBCKiWhhpWSh16kZ1eGST5HM='
+    ],
     points: 8
   }
 ];
@@ -1059,6 +1077,75 @@ function postData(payload) {
   });
 }
 
+
+// ============================================================
+// DÉCHIFFREMENT AES-GCM (Web Crypto API)
+// ============================================================
+async function importKey(hexKey) {
+  const keyBytes = new Uint8Array(
+    hexKey.match(/.{1,2}/g).map(b => parseInt(b, 16))
+  );
+  return await window.crypto.subtle.importKey(
+    'raw', keyBytes, 'AES-GCM', false, ['decrypt']
+  );
+}
+
+async function decryptText(encrypted, cryptoKey) {
+  if (encrypted === null || encrypted === undefined) return encrypted;
+  const [ivB64, cipherB64] = encrypted.split('.');
+  const iv = Uint8Array.from(atob(ivB64), c => c.charCodeAt(0));
+  const cipher = Uint8Array.from(atob(cipherB64), c => c.charCodeAt(0));
+  const decrypted = await window.crypto.subtle.decrypt(
+    { name: 'AES-GCM', iv: iv },
+    cryptoKey,
+    cipher
+  );
+  return new TextDecoder().decode(decrypted);
+}
+
+async function decryptAllData(cryptoKey) {
+  for (let q of QUIZ) {
+    q.text = await decryptText(q.text, cryptoKey);
+    q.options = await Promise.all(q.options.map(o => decryptText(o, cryptoKey)));
+  }
+  if (typeof EXERCISE_CONTEXT_ENC !== 'undefined') {
+    EXERCISE_CONTEXT = await decryptText(EXERCISE_CONTEXT_ENC, cryptoKey);
+  }
+  for (let ex of EXERCISES) {
+    ex.text = await decryptText(ex.text, cryptoKey);
+    if (ex.partie) ex.partie = await decryptText(ex.partie, cryptoKey);
+    if (ex.options) {
+      ex.options = await Promise.all(ex.options.map(o => decryptText(o, cryptoKey)));
+    }
+    if (ex.journal) ex.journal = await decryptText(ex.journal, cryptoKey);
+    if (ex.answer !== undefined && ex.answer !== null) {
+      ex.answer = parseFloat(await decryptText(ex.answer, cryptoKey));
+    }
+    if (ex.answers) {
+      ex.answers = await Promise.all(
+        ex.answers.map(async a => parseFloat(await decryptText(a, cryptoKey)))
+      );
+    }
+    if (ex.expectedLines) {
+      for (let line of ex.expectedLines) {
+        if (typeof line.account === 'string') {
+          line.account = await decryptText(line.account, cryptoKey);
+        } else if (Array.isArray(line.account)) {
+          line.account = await Promise.all(
+            line.account.map(a => decryptText(a, cryptoKey))
+          );
+        }
+        if (line.debit !== undefined && line.debit !== null) {
+          line.debit = parseFloat(await decryptText(String(line.debit), cryptoKey));
+        }
+        if (line.credit !== undefined && line.credit !== null) {
+          line.credit = parseFloat(await decryptText(String(line.credit), cryptoKey));
+        }
+      }
+    }
+  }
+}
+
 // ============================================================
 // TIMER
 // ============================================================
@@ -1096,8 +1183,35 @@ async function handleLogin() {
   try {
     // Step 1: check_email
     const emailResult = await jsonp({ action: 'check_email', email: email });
+
+    // Verrou fermé
+    if (emailResult.error === 'locked') {
+      showScreen('screenLocked');
+      return;
+    }
+
     if (!emailResult.found) {
       errorEl.textContent = "Cette adresse email n'est pas enregistrée. Contacte ton professeur.";
+      btn.disabled = false;
+      btn.textContent = "Commencer l'évaluation";
+      return;
+    }
+
+    if (!emailResult.cle) {
+      errorEl.textContent = "Erreur technique : clé absente. Préviens ton professeur.";
+      btn.disabled = false;
+      btn.textContent = "Commencer l'évaluation";
+      return;
+    }
+
+    // Importer la clé et déchiffrer toutes les données
+    try {
+      const cryptoKey = await importKey(emailResult.cle);
+      await decryptAllData(cryptoKey);
+      applyShuffles();
+    } catch (cryptoErr) {
+      console.error(cryptoErr);
+      errorEl.textContent = "Erreur technique au chargement. Préviens ton professeur.";
       btn.disabled = false;
       btn.textContent = "Commencer l'évaluation";
       return;
@@ -1164,19 +1278,22 @@ function shuffleOptions(arr, correctIndex) {
   return { options: shuffled, correct: shuffled.indexOf(correctText) };
 }
 
-QUIZ.forEach(q => {
-  const shuffled = shuffleOptions(q.options, q.correct);
-  q.options = shuffled.options;
-  q.correct = shuffled.correct;
-});
-
-EXERCISES.forEach(ex => {
-  if (ex.type === 'qcm' && Array.isArray(ex.options) && ex.options.length > 1) {
-    const shuffled = shuffleOptions(ex.options, ex.correct);
-    ex.options = shuffled.options;
-    ex.correct = shuffled.correct;
-  }
-});
+// La randomisation des options est appelée APRÈS le déchiffrement
+// (voir applyShuffles() dans handleLogin)
+function applyShuffles() {
+  QUIZ.forEach(q => {
+    const shuffled = shuffleOptions(q.options, q.correct);
+    q.options = shuffled.options;
+    q.correct = shuffled.correct;
+  });
+  EXERCISES.forEach(ex => {
+    if (ex.type === 'qcm' && Array.isArray(ex.options) && ex.options.length > 1) {
+      const shuffled = shuffleOptions(ex.options, ex.correct);
+      ex.options = shuffled.options;
+      ex.correct = shuffled.correct;
+    }
+  });
+}
 
 // ============================================================
 // QUIZ RENDERING
